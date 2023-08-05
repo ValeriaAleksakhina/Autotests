@@ -1,13 +1,13 @@
 Feature('RadioIsEmpty');
 
 Scenario('open my website11', ({ I }) => {
-  I.amOnPage('https://testing-dev.zocean.pw/ui/autotest_js_snippet_requirede033358e1f244813b546d0c4edab97f7/04f7d09f-1768-495a-865a-06e7a64811ac#vIn=true&cId=root');
+  I.amOnPage('/autotest_js_snippet_requirede033358e1f244813b546d0c4edab97f7/04f7d09f-1768-495a-865a-06e7a64811ac#vIn=true&cId=root');
   I.fillField('Введите логин', 'autotest48');
   I.fillField('Введите пароль', secret('autotest48'));
   I.click('Войти');
 
   I.waitForNavigation();
-  I.amOnPage('https://testing-dev.zocean.pw/ui/autotest_js_snippet_requirede033358e1f244813b546d0c4edab97f7/04f7d09f-1768-495a-865a-06e7a64811ac#vIn=true&cId=config_autotest_js_snippet_required_instance_forme033358e1f244813b546d0c4edab97f7&eId=04f7d09f-1768-495a-865a-06e7a64811ac&md=new&tp=view');
+  I.amOnPage('/autotest_js_snippet_requirede033358e1f244813b546d0c4edab97f7/04f7d09f-1768-495a-865a-06e7a64811ac#vIn=true&cId=config_autotest_js_snippet_required_instance_forme033358e1f244813b546d0c4edab97f7&eId=04f7d09f-1768-495a-865a-06e7a64811ac&md=new&tp=view');
   I.waitForText("Создание карточки", 60);
   I.see("Создание карточки");
 
