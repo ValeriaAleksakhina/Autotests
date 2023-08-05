@@ -10,7 +10,9 @@ exports.config = {
     }
   },
   include: {
-    I: './steps_file.js'
+    I: './steps_file.js',
+
+    cardPage: "./pages/cardPage.js",
   },
   name: 'exampleTests'
 }
