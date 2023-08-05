@@ -2,6 +2,7 @@ Feature('NumericIsEmpty');
 
 Scenario('open my website5', ({ I }) => {
   I.amOnPage('/autotest_js_snippet_requirede033358e1f244813b546d0c4edab97f7/04f7d09f-1768-495a-865a-06e7a64811ac#vIn=true&cId=root');
+  I.waitForElement('input[placeholder="Введите логин"]',30); 
   I.fillField('Введите логин', 'autotest48');
   I.fillField('Введите пароль', secret('autotest48'));
   I.click('Войти');
