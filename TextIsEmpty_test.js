@@ -16,7 +16,7 @@ Scenario('open my website3', ({ I }) => {
 
   I.click('input[name="field-data.auto_field_bool"]');
 
-  //I.fillField('div[data-cy="field-data.auto_field_text"] input', 'Hello2');
+ 
   I.fillField('div[data-cy="field-data.auto_field_note"] textarea', 'Hello3');
   I.fillField('div[data-cy="field-data.auto_field_numeric"] input', '6664');
  
@@ -47,9 +47,9 @@ Scenario('open my website3', ({ I }) => {
   
   I.attachFile('input[name="data.auto_field_image"]', 'Screenshot_1.png');
 
-  //I.waitForElement("button[name=Сохранить]");
+ 
   I.click('Сохранить');
   I.waitForText("Пожалуйста, заполните все обязательные поля", 30);
 
- pause();
+
 });

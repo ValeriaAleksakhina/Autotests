@@ -12,9 +12,6 @@ Scenario('Checked Title', ({ I }) => {
   I.see("Создание карточки");
 
 
-
- // I.fillField('div[data-cy="field-data.auto_field_title"] input', 'Hello1');
-
   I.click('input[name="field-data.auto_field_bool"]');
 
   I.fillField('div[data-cy="field-data.auto_field_text"] input', 'Hello2');
@@ -48,10 +45,9 @@ Scenario('Checked Title', ({ I }) => {
   
   I.attachFile('input[name="data.auto_field_image"]', 'Screenshot_1.png');
 
-   //I.waitForElement("button[name=Сохранить]");
   I.click('Сохранить');
   I.waitForText("Пожалуйста, заполните все обязательные поля", 30);
 
 
-  pause();
+  
 });

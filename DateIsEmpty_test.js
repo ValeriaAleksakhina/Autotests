@@ -41,7 +41,6 @@ Scenario('open my website12', ({ I }) => {
   I.click(locate('div[data-cy="data.auto_field_list_of_values_radio"] .ms-ChoiceFieldLabel').withText("Вариант 2"));
   
   
-  //I.fillField('div[data-cy="field-data.auto_field_date"] input[type=text]', '01.02.2002');
   I.fillField('div[data-cy="field-data.auto_field_date"] input[type=time]', '11:34:36');
   
   I.attachFile('input[name="data.auto_field_image"]', 'Screenshot_1.png');
@@ -51,5 +50,4 @@ Scenario('open my website12', ({ I }) => {
   I.waitForText("Пожалуйста, заполните все обязательные поля", 30);
   I.see("Пожалуйста, заполните все обязательные поля");
 
- pause();
 });

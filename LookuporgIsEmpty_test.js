@@ -26,8 +26,6 @@ Scenario('open my website8', ({ I }) => {
   I.click('div[data-cy="field-data.auto_field_lookup_multiple"] i[data-icon-name="ChevronDownMed"]');
   I.click('span[data-cy="lookup-text-auto_test_2"]');
 
-//   I.click('div[data-cy="field-data.auto_field_lookup_org"] i[data-icon-name="ChevronDownMed"]');
-//   I.click('span[data-cy="lookup-text-114/3"]');
   I.scrollTo('span[title="Поле LOOKUP_ORG_MULTIPLE"]');
 
   I.click('div[data-cy="field-data.auto_field_lookup_org_multiple"] i[data-icon-name="ChevronDownMed"]');
@@ -51,5 +49,4 @@ Scenario('open my website8', ({ I }) => {
   I.waitForText("Пожалуйста, заполните все обязательные поля", 30);
   I.see("Пожалуйста, заполните все обязательные поля");
 
- pause();
 });

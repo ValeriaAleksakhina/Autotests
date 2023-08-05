@@ -33,9 +33,6 @@ Scenario('open my website10', ({ I }) => {
   I.click('div[data-cy="field-data.auto_field_lookup_org_multiple"] i[data-icon-name="ChevronDownMed"]');
   I.click('span[data-cy="lookup-text-111111"]');
 
-//   I.click('div[data-cy="field-data.auto_field_list_of_values"] i[data-icon-name="ChevronDown"]');
-//   I.click('button[title="Вариант 3"]');
-
   I.scrollPageToBottom();
 
   I.click(locate('div[data-cy="data.auto_field_list_of_values_radio"] .ms-ChoiceFieldLabel').withText("Вариант 2"));
@@ -51,5 +48,4 @@ Scenario('open my website10', ({ I }) => {
   I.waitForText("Пожалуйста, заполните все обязательные поля", 30);
   I.see("Пожалуйста, заполните все обязательные поля");
 
- pause();
 });

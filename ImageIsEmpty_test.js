@@ -44,12 +44,9 @@ Scenario('open my website14', ({ I }) => {
   I.fillField('div[data-cy="field-data.auto_field_date"] input[type=text]', '01.02.2002');
   I.fillField('div[data-cy="field-data.auto_field_date"] input[type=time]', '11:34:36');
   
-  //I.attachFile('input[name="data.auto_field_image"]', 'Screenshot_1.png');
-
   I.waitForElement("button[name=Сохранить]");
   I.click('Сохранить');
   I.waitForText("Пожалуйста, заполните все обязательные поля", 30);
   I.see("Пожалуйста, заполните все обязательные поля");
 
- pause();
 });

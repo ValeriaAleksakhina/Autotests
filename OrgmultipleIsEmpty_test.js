@@ -30,8 +30,6 @@ Scenario('open my website9', ({ I }) => {
   I.click('span[data-cy="lookup-text-114/3"]');
   I.scrollTo('span[title="Поле LOOKUP_ORG_MULTIPLE"]');
 
-//   I.click('div[data-cy="field-data.auto_field_lookup_org_multiple"] i[data-icon-name="ChevronDownMed"]');
-//   I.click('span[data-cy="lookup-text-111111"]');
 
   I.click('div[data-cy="field-data.auto_field_list_of_values"] i[data-icon-name="ChevronDown"]');
   I.click('button[title="Вариант 3"]');
@@ -51,5 +49,5 @@ Scenario('open my website9', ({ I }) => {
   I.waitForText("Пожалуйста, заполните все обязательные поля", 30);
   I.see("Пожалуйста, заполните все обязательные поля");
 
- pause();
+ 
 });

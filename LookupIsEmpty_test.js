@@ -21,8 +21,6 @@ Scenario('open my website6', ({ I }) => {
   I.fillField('div[data-cy="field-data.auto_field_numeric"] input', '6664');
  
 
-  //I.click('div[data-cy="field-data.auto_field_lookup"] i[data-icon-name="ChevronDownMed"]');
- // I.click('span[data-cy="lookup-text-auto_test_1"]');
   I.click('div[data-cy="field-data.auto_field_lookup_multiple"] i[data-icon-name="ChevronDownMed"]');
   I.click('span[data-cy="lookup-text-auto_test_2"]');
 
@@ -51,5 +49,4 @@ Scenario('open my website6', ({ I }) => {
   I.waitForText("Пожалуйста, заполните все обязательные поля", 30);
   I.see("Пожалуйста, заполните все обязательные поля");
 
- pause();
 });
