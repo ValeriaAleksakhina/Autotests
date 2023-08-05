@@ -1,13 +1,11 @@
 Feature('All_test');
 
-Scenario('open my website', ({ I }) => {
-  I.amOnPage('/autotest_js_snippet_requirede033358e1f244813b546d0c4edab97f7/04f7d09f-1768-495a-865a-06e7a64811ac#vIn=true&cId=root');
-  I.waitForElement('input[placeholder="Введите логин"]',30); 
-  I.fillField('Введите логин', 'autotest48');
-  I.fillField('Введите пароль', secret('autotest48'));
-  I.click('Войти');
 
-  I.waitForNavigation();
+
+Scenario('open my website', ({ I}) => {
+  I.amOnPage('/autotest_js_snippet_requirede033358e1f244813b546d0c4edab97f7/04f7d09f-1768-495a-865a-06e7a64811ac#vIn=true&cId=root');
+  I.login("autotest48", "autotest48");
+  
   I.amOnPage('/autotest_js_snippet_requirede033358e1f244813b546d0c4edab97f7/04f7d09f-1768-495a-865a-06e7a64811ac#vIn=true&cId=config_autotest_js_snippet_required_instance_forme033358e1f244813b546d0c4edab97f7&eId=04f7d09f-1768-495a-865a-06e7a64811ac&md=new&tp=view');
   I.waitForText("Создание карточки", 60);
   I.see("Создание карточки");
@@ -40,9 +38,9 @@ Scenario('open my website', ({ I }) => {
   // I.click('div[data-cy="field-data.auto_field_list_of_values"] i[data-icon-name="ChevronDown"]');
   // I.click('button[title="Вариант 3"]');
 
-  I.scrollPageToBottom();
+  // I.scrollPageToBottom();
 
-  I.click(locate('div[data-cy="data.auto_field_list_of_values_radio"] .ms-ChoiceFieldLabel').withText("Вариант 2"));
+  // I.click(locate('div[data-cy="data.auto_field_list_of_values_radio"] .ms-ChoiceFieldLabel').withText("Вариант 2"));
 
   
   
@@ -51,5 +49,5 @@ Scenario('open my website', ({ I }) => {
   
   // I.attachFile('input[name="data.auto_field_image"]', 'Screenshot_1.png');
 
- pause();
+ //pause();
 });
