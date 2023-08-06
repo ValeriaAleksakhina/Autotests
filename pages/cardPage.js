@@ -90,7 +90,15 @@ module.exports = {
   },
   saveForm() {
     I.click(this.fields.saveButton)
-  }
+  },
 
+  checkOk() {
+    I.waitForNavigation();
+  },
+
+  checkError() {
+    I.waitForText("Пожалуйста, заполните все обязательные поля", 30);
+    I.click('ОК');
+  }
 
 }
