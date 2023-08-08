@@ -15,43 +15,41 @@ module.exports = {
       date: 'div[data-cy="field-data.date_7"] input[type=text]'
     },
     saveButton: 'button[name=Сохранить]',
-    checkButton:
-    
+
   },
 
-      openPage() {
-        I.amOnPage('https://testing-dev.zocean.pw/ui/test_field_date_1e033358e1f244813b546d0c4edab97f7/689e8596-7c14-4f56-be52-4e0200e9ad9a#vIn=true&cId=config_test_field_date_1_instance_forme033358e1f244813b546d0c4edab97f7&eId=689e8596-7c14-4f56-be52-4e0200e9ad9a&md=new&tp=view');
-      },
+  openPage() {
+    I.amOnPage('https://testing-dev.zocean.pw/ui/test_field_date_1e033358e1f244813b546d0c4edab97f7/689e8596-7c14-4f56-be52-4e0200e9ad9a#vIn=true&cId=config_test_field_date_1_instance_forme033358e1f244813b546d0c4edab97f7&eId=689e8596-7c14-4f56-be52-4e0200e9ad9a&md=new&tp=view');
+  },
 
-      checkOpen() {
-        I.waitForText("Создание карточки 'Тестирование date полей 1'", 60);
-        I.see("Создание карточки 'Тестирование date полей 1'");
-      },
+  checkOpen() {
+    I.waitForText("Создание карточки 'Тестирование date полей 1'", 60);
+    I.see("Создание карточки 'Тестирование date полей 1'");
+  },
 
-      fillTitle(title) {
-        I.fillField(this.fields.title, title);
-      },
-      fillDate1(date, time) {
-        I.fillField(this.fields.date1.date, date)
-        I.fillField(this.fields.date1.time, time)
-      },
-      fillDate2(date, time) {
-        I.fillField(this.fields.date2.date, date)
-        I.fillField(this.fields.date2.time, time)
-      },
-      fillDate3(date) {
-        I.fillField(this.fields.date3.date, date)
-      },
+  fillTitle(title) {
+    I.fillField(this.fields.title, title);
+  },
+  fillDate1(date, time) {
+    I.fillField(this.fields.date1.date, date)
+    I.fillField(this.fields.date1.time, time)
+  },
+  fillDate2(date, time) {
+    I.fillField(this.fields.date2.date, date)
+    I.fillField(this.fields.date2.time, time)
+  },
+  fillDate3(date) {
+    I.fillField(this.fields.date3.date, date)
+  },
 
-      saveForm() {
-        I.click(this.fields.saveButton)
-      },
-      checkOk() {
-        I.waitForNavigation();
-      },
-      checkSave(){
-        I.click(this.fields.checkButton),
-        I.waitForNavigation();
-      }
-    }
-  
+  saveForm() {
+    I.click(this.fields.saveButton)
+  },
+  checkOk() {
+    I.waitForNavigation();
+  },
+  checkSave() {
+    I.clickRow(title),
+    I.waitForNavigation();
+  }
+}
