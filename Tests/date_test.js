@@ -20,13 +20,7 @@ Scenario('Проверка сохранения дат', ({ I, datePage, listPag
     datePage.saveForm();
     datePage.checkOk();
 
-    
-    //I.scrollTo(title);
-    //I.scrollTo('div[data-automationid="DetailsRowCell"] a span'.withText(title));
-    
-
-
-   
+     
     listPage.chooseTitle(title);
     listPage.checkOk();
 
@@ -35,6 +29,7 @@ Scenario('Проверка сохранения дат', ({ I, datePage, listPag
     datePage.checkDate1('01.01.2001', '10:15:08');
     datePage.checkDate2('01.01.2001', '10:15');
     datePage.checkDate3('01.01.2023');
+
       
 });
 

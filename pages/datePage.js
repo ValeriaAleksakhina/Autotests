@@ -49,7 +49,7 @@ module.exports = {
     I.waitForNavigation();
   },
 
-  checkTitle(title) {
+    checkTitle(title) {
     I.seeInField(this.fields.date3.date, title)
   },
 
@@ -65,9 +65,6 @@ module.exports = {
     I.seeInField(this.fields.date3.date, date)
   },
 
-  checkOk() {
-    I.waitForNavigation();
-  },
 }
 
 
