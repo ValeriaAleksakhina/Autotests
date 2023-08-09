@@ -15,6 +15,7 @@ exports.config = {
 
     cardPage: "./pages/cardPage.js",
     datePage: "./pages/datePage.js",
+    listPage: "./pages/listPage.js",
   },
   name: 'exampleTests'
 }

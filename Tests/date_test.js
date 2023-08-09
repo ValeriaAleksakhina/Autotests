@@ -1,9 +1,7 @@
-const { fillDate1 } = require("../pages/datePage");
 
+Feature('Ввод дат');
 
-Feature('date');
-
-Scenario('check date', ({ I, datePage }) => {
+Scenario('Проверка сохранения дат', ({ I, datePage, listPage }) => {
     datePage.openPage();
     I.login('autotest48', 'autotest48');
     datePage.openPage();
@@ -11,19 +9,31 @@ Scenario('check date', ({ I, datePage }) => {
 
     const title = `test-${Date.now()}`;
 
-    if (title) {
-        datePage.fillTitle(title);
-    };
+    datePage.fillTitle(title);
 
 
-    date1 = datePage.fillDate1(['01:01:2001'], ['10:15:08']);
-    date2 = datePage.fillDate2(['01:01:2001'], ['10:15']);
-    date3 = datePage.fillDate3(['01:01:2023']);
+
+    datePage.fillDate1('01.01.2001', '10.15.08');
+    datePage.fillDate2('01.01.2001', '10.15');
+    datePage.fillDate3('01.01.2023');
 
 
     datePage.saveForm();
     datePage.checkOk();
-    datePage.checkSave();
+
+
+
+    listPage.chooseTitle(title);
+    listPage.checkOk();
+
+
+    datePage.checkTitle(title);
+    datePage.checkDate1('01.01.2001', '10.15.08');
+    datePage.checkDate2('01.01.2001', '10.15');
+    datePage.checkDate3('01.01.2023');
+    datePage.checkOk();
+    pause();
+
 
 });
 

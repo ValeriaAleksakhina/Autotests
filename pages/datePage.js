@@ -48,8 +48,29 @@ module.exports = {
   checkOk() {
     I.waitForNavigation();
   },
-  checkSave() {
-    I.clickRow(title),
+
+  checkTitle(title) {
+    I.seeInField(this.fields.date3.date, (title))
+  },
+
+  ckeckDate1(date, time) {
+    I.seeInField(this.fields.date1.date, date)
+    I.seeInField(this.fields.date1.time, time)
+  },
+  ckeckDate2(date, time) {
+    I.seeInField(this.fields.date2.date, date)
+    I.seeInField(this.fields.date2.time, time)
+  },
+  ckeckDate3(date) {
+    I.seeInField(this.fields.date3.date, date)
+  },
+
+  checkOk() {
     I.waitForNavigation();
-  }
+  },
+
+
 }
+
+
+
