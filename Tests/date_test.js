@@ -21,13 +21,13 @@ Scenario('Проверка сохранения дат', ({ I, datePage, listPag
     datePage.checkOk();
 
      
+    listPage.scrollToBottom();
     listPage.chooseTitle(title);
-    listPage.checkOk();
-
+  
 
     datePage.checkTitle(title);
     datePage.checkDate1('01.01.2001', '10:15:08');
-    datePage.checkDate2('01.01.2001', '10:15');
+    datePage.checkDate2('01.01.2001', '10:05');
     datePage.checkDate3('01.01.2023');
 
       

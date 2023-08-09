@@ -49,23 +49,23 @@ module.exports = {
     I.waitForNavigation();
   },
 
-    checkTitle(title) {
-    I.seeInField(this.fields.date3.date, title)
+  checkTitle(title) {
+    I.waitForElement(this.fields.title, 20);
+    I.seeInField(this.fields.title, title)
   },
 
-  ckeckDate1(date, time) {
+  checkDate1(date, time) {
     I.seeInField(this.fields.date1.date, date)
     I.seeInField(this.fields.date1.time, time)
   },
-  ckeckDate2(date, time) {
+  checkDate2(date, time) {
     I.seeInField(this.fields.date2.date, date)
     I.seeInField(this.fields.date2.time, time)
   },
-  ckeckDate3(date) {
+  checkDate3(date) {
     I.seeInField(this.fields.date3.date, date)
   },
-
-}
+};
 
 
 
