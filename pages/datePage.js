@@ -19,7 +19,7 @@ module.exports = {
   },
 
   openPage() {
-    I.amOnPage('https://testing-dev.zocean.pw/ui/test_field_date_1e033358e1f244813b546d0c4edab97f7/689e8596-7c14-4f56-be52-4e0200e9ad9a#vIn=true&cId=config_test_field_date_1_instance_forme033358e1f244813b546d0c4edab97f7&eId=689e8596-7c14-4f56-be52-4e0200e9ad9a&md=new&tp=view');
+    I.amOnPage('/test_field_date_1e033358e1f244813b546d0c4edab97f7/689e8596-7c14-4f56-be52-4e0200e9ad9a#vIn=true&cId=config_test_field_date_1_instance_forme033358e1f244813b546d0c4edab97f7&eId=689e8596-7c14-4f56-be52-4e0200e9ad9a&md=new&tp=view');
   },
 
   checkOpen() {
@@ -50,7 +50,7 @@ module.exports = {
   },
 
   checkTitle(title) {
-    I.seeInField(this.fields.date3.date, (title))
+    I.seeInField(this.fields.date3.date, title)
   },
 
   ckeckDate1(date, time) {
@@ -68,8 +68,6 @@ module.exports = {
   checkOk() {
     I.waitForNavigation();
   },
-
-
 }
 
 
